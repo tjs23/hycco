@@ -127,12 +127,12 @@ into most spreadsheet programs, using a CSV or similar import option.
 The first line of the output file (beginning '#HMM') gives the input parameters
 that Hycco used to generate the data. E.g:
 
-#HMM params - bin_size:5000 min_qual:200 min_chromo_size:1000000 num_hmm_iter:400
+`#HMM params - bin_size:5000 min_qual:200 min_chromo_size:1000000 num_hmm_iter:400`
 
 
 The next line (beginning '#cols') describes the column headings:
 
-#cols - chr  haplotype  region_size  region_start  region_end first_SNP  last_SNP  bin_start bin_end
+`#cols - chr  haplotype  region_size  region_start  region_end first_SNP  last_SNP  bin_start bin_end`
 
 
 The columns respectively describe:
@@ -154,17 +154,22 @@ then follow using the described column order.
 Command line options for Hycco
 ------------------------------
 
-sage: Hycco [-h] [-b BIN_SIZE] [-g] [-m MIN_CHROMO_SIZE] [-n NUM_HMM_ITER]
+```
+Usage: Hycco [-h] [-b BIN_SIZE] [-g] [-m MIN_CHROMO_SIZE] [-n NUM_HMM_ITER]
              [-o OUT_DIR] [-q] [-s RANDOM_SEED]
              [-t TEXT_LABEL [TEXT_LABEL ...]]
              VCF_FILE [VCF_FILE ...]
+```
 
+```
 positional arguments:
   VCF_FILE              Input VCF format files containing variant calls for
                         each parental genotype/strain. Files should be listed
                         sequentially in pair order. Inputs may be gzipped
                         (this is assumed by a .gz file extension).
+```
 
+```
 optional arguments:
   -h, --help            show this help message and exit
   -b BIN_SIZE           Binned analysis region size (in bp) for defining HMM
@@ -189,5 +194,6 @@ optional arguments:
                         which are used to name output files as
                         {NAME}_crossover_regions.tsv, in the same order as the
                         input VCF file pairs.
+```
 
 For further help email tstevens@mrc-lmb.cam.ac.uk or garethb@mrc-lmb.cam.ac.uk
