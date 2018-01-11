@@ -1,0 +1,6 @@
+#!/bin/sh
+
+export HYCCO_DIR="$(cd $(dirname "$0"); pwd)"
+export PYTHONPATH="${PYTHONPATH}:.:${HYCCO_DIR}"
+
+python ${HYCCO_DIR}/hycco.py $*
